@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import worker_script from "./worker2";
+import worker_script from "./workerBlob";
 
 // need to put the worker file in the public folder for its working
 // We can run the worker file by creating a bob and export it as a script
