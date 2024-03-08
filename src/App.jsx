@@ -1,17 +1,13 @@
 import { useState } from "react";
 import "./App.css";
-import WebWorker from "./components/web-worker";
-// import CustomEvent from "./components/custom-event";
 
 function App() {
-  const [toggle, setTogggle] = useState(true);
+  const [count, setCount] = useState(0);
   return (
-    <>
-      <h1>First file</h1>
-      <button onClick={() => setTogggle(!toggle)}>Toggle</button>
-      {toggle && <WebWorker />}
-      {/* <CustomEvent /> */}
-    </>
+    <div>
+      <h2>{count}</h2>
+      <button onClick={() => setCount((prev) => prev + 1)}>INC</button>
+    </div>
   );
 }
 
