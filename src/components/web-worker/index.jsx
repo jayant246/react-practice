@@ -8,7 +8,10 @@ const WebWorker = () => {
   const worker = useMemo(() => new Worker("worker.js"), []);
   const worker2 = useMemo(() => new Worker(worker_script), []);
   // ! worker 3 will throw an error
-  const worker3 = useMemo(() => new Worker("./worker3.js"), []);
+  // const worker3 = useMemo(() => new Worker("./worker3.js"), []);
+
+  // this works by giving relative path
+  const worker3 = useMemo(() => new Worker("src/components/web-worker/worker3.js"), []);
 
   const handleClick = () => {
     console.log("here", worker);
